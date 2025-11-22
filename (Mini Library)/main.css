@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+  }
+  
+  #book-form {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1fr auto;
+    gap: 15px;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+  
+  #book-form input[type="text"],
+  #book-form input[type="number"] {
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+  
+  #book-form button {
+    padding: 12px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  #book-form button:hover {
+    background: #5544c9;
+  }
+  
+  #books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .book-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: relative;
+    transition: transform 0.3s;
+  }
+  
+  .book-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .book-card h3 {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 1.3rem;
+  }
+  
+  .book-card p {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .read-status {
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .read { background: #d4edda; color: #155724; }
+  .not-read { background: #f8d7da; color: #721c24; }
+  
+  .toggle-read {
+    position: absolute;
+    top: 15px;
+    right: 50px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #667eea;
+  }
+  
+  .delete-book {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #e74c3c;
+  }
+  
+  @media (max-width: 768px) {
+    #book-form {
+      grid-template-columns: 1fr;
+    }
+    #book-form button {
+      width: 100%;
+    }
+  }
